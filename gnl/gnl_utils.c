@@ -6,11 +6,11 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:07:55 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/22 17:53:12 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:22:44 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 size_t    ft_strlen(const char *c)
 {

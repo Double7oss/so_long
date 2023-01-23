@@ -6,11 +6,11 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:09:13 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/17 20:20:10 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:32:15 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 char    *get_next_line(int fd)
 {

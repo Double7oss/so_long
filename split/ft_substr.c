@@ -6,23 +6,11 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:52:16 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/18 14:53:37 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:23:18 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-
-size_t	ft_strlen(const char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "../so_long.h"
 
 void	ft_bzero(void *s, size_t n)
 {

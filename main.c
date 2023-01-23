@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/22 18:39:12 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 21:57:41 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,26 @@ void my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 int main(void)
 {
-	t_game vars;
+	char *a;
+	char **map;
+
+	a = "11110111\n10000001\n10000001\n10000001\n11111111";
+	map = ft_split(a, '\n');
+	//int i = 0;
+	printf("is valide %d\n", is_wall(map));
+	// while (map[i] != '\0')
+	// {
+	// 	printf("map[%d] = %s\n", i, map[i]);
+	// 	i++;
+	// }
 	
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 1920, 1080, "hello world!");
-	mlx_hook(vars.win, 17, 1L<<0, ft_close, &vars);
-	mlx_loop(vars.mlx);
+}
+	// t_game vars;
+	
+	// vars.mlx = mlx_init();
+	// vars.win = mlx_new_window(vars.mlx, 1920, 1080, "hello world!");
+	// mlx_hook(vars.win, 17, 1L<<0, ft_close, &vars);
+	// mlx_loop(vars.mlx);
 	// void *mlx;
 	// void *mlx_win;
 	// t_data img;
@@ -47,5 +61,3 @@ int main(void)
 	// my_mlx_pixel_put(&img, 5, 5,0x0000FF00);
 	// mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
 	// mlx_loop(mlx);
-	
-}

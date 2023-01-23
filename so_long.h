@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/22 17:53:25 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:30:53 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,13 @@ typedef struct s_game {
 	void *mlx;
 	void *win;
 	void **map;
+	int x_pos;
+	int y_pos;
 }	t_game;
 
+
+//valde map
+int is_wall(char **map);
 //split
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

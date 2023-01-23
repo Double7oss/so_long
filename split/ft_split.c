@@ -6,11 +6,11 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:42:21 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/18 14:51:32 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:21:59 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 int	ft_countword(char const *s, char c)
 {
