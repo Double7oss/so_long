@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:48:25 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/23 21:57:28 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:22:38 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,24 @@ int is_wall(char **map)
 	return (1);
 }
 
-// int check_double(char **map)
-// {
-// 	int i;
-// 	int j;
+int is_valide(char **map)
+{
+	int i;
+	int j;
 
-// 	i = 0;
-// 	j = 0;
-// 	while (map[i] != '\0')
-// 		i++;
-// 	while ()
-// }
+	i = 0;
+	while (map[i] != '\0')
+	{
+		j = 0;
+		while (map[i][j] != '\0')
+		{
+			if (map[i][j] != 'E' && map[i][j] != 'C' && map[i][j] != 'P' && map[i][j] != '1' && map[i][j] != '0')
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
+
