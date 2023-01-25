@@ -6,26 +6,11 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/23 21:57:41 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:36:46 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-int ft_close(t_game *vars)
-{
-	mlx_destroy_window(vars->mlx, vars->win);
-	return (0);
-}
-
-
-void my_mlx_pixel_put(t_data *data, int x, int y, int color)
-{
-	char *dst;
-	
-	dst = data->addr + (y * data->line_length + x * (data->bpp / 8));
-	*(unsigned int*)dst = color;
-}
 
 int main(void)
 {

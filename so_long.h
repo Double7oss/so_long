@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/24 18:27:34 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/25 22:31:25 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ typedef struct s_game {
 	char **map;
 	int flag_e;
 	int flag_p;
+	int player_x;
+	int player_y;
+	int map_h;
+	int map_w;
 }	t_game;
 
 
