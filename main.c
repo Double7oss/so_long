@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/25 19:36:46 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:59:14 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int main(void)
 	a = "11110111\n10000001\n10000001\n10000001\n11111111";
 	map = ft_split(a, '\n');
 	//int i = 0;
-	printf("is valide %d\n", is_wall(map));
 	// while (map[i] != '\0')
 	// {
 	// 	printf("map[%d] = %s\n", i, map[i]);
