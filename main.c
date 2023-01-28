@@ -6,25 +6,23 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/26 17:59:14 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/28 18:56:37 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int main(void)
+int main(int ac, char **av)
 {
-	char *a;
-	char **map;
+	if (ac == 2)
+	{
+		t_game game;
 
-	a = "11110111\n10000001\n10000001\n10000001\n11111111";
-	map = ft_split(a, '\n');
-	//int i = 0;
-	// while (map[i] != '\0')
-	// {
-	// 	printf("map[%d] = %s\n", i, map[i]);
-	// 	i++;
-	// }
+		game.map = read_map(av[1]);
+		initial_game(&game);
+		
+	}
+	
 	
 }
 	// t_game vars;

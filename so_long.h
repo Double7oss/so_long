@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/26 17:59:40 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/27 19:07:59 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ typedef struct s_data {
 typedef struct s_game {
 	void *mlx;
 	void *win;
-	int *img_width;
-	int *img_hight;
+	int img_width;
+	int img_hight;
 	void *img_p;
 	void *img_c;
 	void *img_e;
@@ -68,7 +68,11 @@ int dr_map(t_game *game);
 int exit_game(t_game *game);
 //initial game
 void initial_game(t_game *game);
+void initial_image(t_game *gimg);
 //read map
 char **read_map(char *path);
+//utils
+char	*ft_strjoin_so_long(char const *s1, char const *s2);
+char	*ft_strcat_so_long(char *dest, const char *src);
 
 #endif

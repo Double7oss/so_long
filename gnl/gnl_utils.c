@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:07:55 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/23 19:22:44 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:22:07 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ char    *ft_strjoin(char *s1, char c)
         return (NULL);
     s[0] = '\0';
     ft_strcat(s, s1);
-    if (c == '\n')
-    {
-        s[s1l] = '\0';
-        free(s1);
-        return (s);
-    }
+    // if (c == '\n')
+    // {
+    //     s[s1l] = '\0';
+    //     free(s1);
+    //     return (s);
+    // }
     s[s1l] = c;
     s[s1l + 1] = '\0';
     free(s1);

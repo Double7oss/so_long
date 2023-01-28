@@ -2,11 +2,11 @@ NAME = so_long
 
 CC = @CC
 
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 
 MINILIBX = -lmlx -framework OpenGL -framework AppKit -lz
 
-SRC = main.c ./gnl/gnl.c ./gnl/gnl_utils.c ./split/ft_split.c ./split/ft_substr.c map_valide.c
+SRC = main.c ./gnl/gnl.c ./gnl/gnl_utils.c ./split/ft_split.c ./split/ft_substr.c map_valide.c map.c utils.c initialization.c draw_game.c
 
 OBJS = $(SRC:.c=.o)
 
