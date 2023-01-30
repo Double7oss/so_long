@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:24:37 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/28 19:40:55 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/01/28 21:26:19 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void initial_game(t_game *game)
 	game->mlx = mlx_init();
 	initial_win_szie(game);
 	game->win = mlx_new_window(game->mlx, game->map_w, game->map_h, "so_long");
-	// game->moves = 0;
+	game->moves = 0;
 	initial_image(game);
 	dr_map(game);
 	mlx_loop(game->mlx);
