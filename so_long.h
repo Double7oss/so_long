@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/27 19:07:59 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/01 18:13:03 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-typedef struct s_data {
-	void *img;
-	char *addr;
-	int bpp;
-	int line_length;
-	int endian;
-}	t_data;
+
 
 typedef struct s_game {
 	void *mlx;
@@ -40,7 +34,7 @@ typedef struct s_game {
 	char **map;
 	int flag_e;
 	int flag_p;
-	int flag_c;
+	int nc;
 	int player_x;
 	int player_y;
 	int map_h;
