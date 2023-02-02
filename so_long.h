@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/01 18:13:03 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/02 20:52:13 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ typedef struct s_game {
 	int moves;
 }	t_game;
 
+# define KEY_W 13
+# define KEY_A 0
+# define KEY_D 2
+# define KEY_S 1
+# define KEY_UP 126
+# define KEY_DOWN 125
+# define KEY_LEFT 123
+# define KEY_RIGHT 124
+# define KEY_ESC 23
+# define KEY_Q 12
 
 //valde map
 int is_wall(char **map);
@@ -68,5 +78,10 @@ char **read_map(char *path);
 //utils
 char	*ft_strjoin_so_long(char const *s1, char const *s2);
 char	*ft_strcat_so_long(char *dest, const char *src);
+//keys
+void _w(t_game *game)
+void _s(t_game *game)
+void _a(t_game *game)
+void _d(t_game *game)
 
 #endif
