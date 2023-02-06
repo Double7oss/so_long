@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:09:24 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/28 18:53:17 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/05 16:50:53 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,10 @@
 
 void dr_img(t_game *game, void *img, int x, int y)
 {
-	printf("x = %d", x);
-	printf("y = %d", y);
 	mlx_put_image_to_window(game->mlx, game->win, img, x * 65, y * 65);
 }
 
-void dr_player(t_game *game, void *img, int x, int y)
-{
-	game->player_x = x;
-	game->player_y = y;
-	dr_img(game, img, x, y);
-}
+
 
 int dr_map(t_game *game)
 {
@@ -44,7 +37,11 @@ int dr_map(t_game *game)
 			else if (game->map[y][x] == 'C')
 				dr_img(game, game->img_c, x, y);
 			else if (game->map[y][x] == 'P')
-				dr_player(game, game->img_p, x, y);
+			{
+				game->player_x = x;
+				game->player_y = y;
+				dr_img(game, game->img_p, x, y);
+			}
 			else
 				dr_img(game, game->img_e, x, y);
 			x++;

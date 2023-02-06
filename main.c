@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/28 18:56:37 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:42:37 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,17 @@ int main(int ac, char **av)
 	if (ac == 2)
 	{
 		t_game game;
-
+		t_path path;
+		
+		path.map = read_map(av[1]);
+		valide_map(path.map);
+		valid_path(&path);
 		game.map = read_map(av[1]);
 		initial_game(&game);
 		
+		
+		//gameplaye(&game);
+		// mlx_loop(game.mlx);
 	}
 	
 	

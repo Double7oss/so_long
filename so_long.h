@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/02 20:52:13 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:03:52 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-
+typedef struct s_path {
+	char **map;
+	int player_x;
+	int player_y;
+}	t_path;
 
 typedef struct s_game {
 	void *mlx;
@@ -32,14 +36,13 @@ typedef struct s_game {
 	void *img_w;
 	void *img_field;
 	char **map;
-	int flag_e;
-	int flag_p;
 	int nc;
 	int player_x;
 	int player_y;
 	int map_h;
 	int map_w;
 	int moves;
+	int end;
 }	t_game;
 
 # define KEY_W 13
@@ -50,7 +53,7 @@ typedef struct s_game {
 # define KEY_DOWN 125
 # define KEY_LEFT 123
 # define KEY_RIGHT 124
-# define KEY_ESC 23
+# define KEY_ESC 53
 # define KEY_Q 12
 
 //valde map
@@ -79,9 +82,18 @@ char **read_map(char *path);
 char	*ft_strjoin_so_long(char const *s1, char const *s2);
 char	*ft_strcat_so_long(char *dest, const char *src);
 //keys
-void _w(t_game *game)
-void _s(t_game *game)
-void _a(t_game *game)
-void _d(t_game *game)
+void _w(t_game *game);
+void _s(t_game *game);
+void _a(t_game *game);
+void _d(t_game *game);
+void gameplaye(t_game *game);
+//path
+void path_position(t_path *path);
+void valid_path(t_path *path);
+//valide map
+void valide_map(char **map);
+
+
+int press_button(int keycode, t_game *game);
 
 #endif
