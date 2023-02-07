@@ -6,11 +6,20 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:57:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/01/27 19:42:07 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/07 22:48:08 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void empty(char *line)
+{
+	if (line[0] == '\n')
+	{
+		ft_printf("Error, Empty line\n");
+		exit(-1);
+	}
+}
 
 char **read_map(char *path)
 {
@@ -30,6 +39,7 @@ char **read_map(char *path)
 		if (!line)
 			break;
 		holder = h_map;
+		empty(line);
 		h_map = ft_strjoin_so_long(holder, line);
 		free(holder);
 		free(line);

@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 21:27:30 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/07 22:33:13 by hel-kadd         ###   ########.fr       */
+/*   Created: 2022/10/31 20:20:21 by hel-kadd          #+#    #+#             */
+/*   Updated: 2023/02/07 20:39:18 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-int check_ber(char *av)
+void	ft_putunbr(unsigned int n)
 {
-	int i;
-	
-	i = 0;
-	while (av[i])
-		i++;
-	i -= 1;
-	if (av[i] == 'r' && av[i - 1] == 'e' && av[i - 2] == 'b' && av[i - 3] == '.')
-		return (1);
-	return (0);
+	char	c;
+
+	if (n >= 10)
+	{
+		ft_putunbr(n / 10);
+		ft_putunbr(n % 10);
+	}
+	if (n < 10)
+	{
+		c = n + '0';
+		ft_putchar(c);
+	}
 }
 
-int check_empty_line(char **map)
+int	c_udec(unsigned int n)
 {
-	int i;
-	int y;
+	int	count;
 
-	i = 0;
-	y = 0;
-	while (map[y] != '\0')
+	count = 1;
+	while (n / 10 != 0)
 	{
-		if (map[y][i] == '\n')
-			return (0);
-		y++;
+		count++;
+		n = n / 10;
 	}
-	return (1);
+	return (count);
+}
+
+int	printunbr(unsigned int n)
+{
+	ft_putunbr(n);
+	return (c_udec((unsigned int) n));
 }

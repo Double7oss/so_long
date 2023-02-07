@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:58:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/06 16:03:52 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/07 22:23:42 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct s_path {
 	char **map;
@@ -92,6 +93,26 @@ void path_position(t_path *path);
 void valid_path(t_path *path);
 //valide map
 void valide_map(char **map);
+int check_ber(char *av);
+int check_empty_line(char **map);
+//ft_printf
+int		ft_printf(const char *str, ...);
+int		print_mhex(unsigned int n);
+int		printhex(size_t n);
+int		c_hex(unsigned int c);
+int		c_dec(int n);
+int		ft_printchar(char c);
+int		printstr(const char *s);
+int		printnbr(int n);
+int		printunbr(unsigned int n);
+int		printvp(unsigned long n);
+void	ft_putchar(char c);
+void	ft_putnbr(int n);
+void	ft_putstr(const char *s);
+void	ft_print_mhex(unsigned int n);
+void	ft_printhex(unsigned long n);
+void	ft_putunbr(unsigned int n);
+int		ft_printf_spec(const char *s, va_list ap, int i);
 
 
 int press_button(int keycode, t_game *game);

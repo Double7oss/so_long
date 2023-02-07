@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:57:36 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/06 17:12:55 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:44:42 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void player_events(int keycode, t_game *game)
 		game->player_x += 1;
 		_d(game);
 	}
-	printf("Moves: %d\n", game->moves);
+	ft_printf("Moves: %d\n", game->moves);
 }
 
 int press_button(int keycode, t_game *game)

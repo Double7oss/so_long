@@ -6,11 +6,18 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:49 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/06 15:42:37 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/07 22:29:13 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	check_mas(char **map)
+{
+	for (int i = 0; map[i]; i++)
+		printf("%s\n", map[i]);
+	
+}
 
 int main(int ac, char **av)
 {
@@ -19,15 +26,18 @@ int main(int ac, char **av)
 		t_game game;
 		t_path path;
 		
+		
+		if (check_ber(av[1]) == 0)
+		{
+			ft_printf("Error\n");
+			exit(-1);
+		}	
 		path.map = read_map(av[1]);
+		check_mas(path.map);
 		valide_map(path.map);
 		valid_path(&path);
 		game.map = read_map(av[1]);
 		initial_game(&game);
-		
-		
-		//gameplaye(&game);
-		// mlx_loop(game.mlx);
 	}
 	
 	

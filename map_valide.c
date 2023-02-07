@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:48:25 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/06 16:18:52 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/07 22:24:08 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int count_element(char **map, char c)
 
 void valide_map(char **map)
 {
-	if (is_rectangular(map) == 0 || is_wall(map) == 0 || is_valide(map) == 0 || count_element(map, 'E') != 1 || count_element(map, 'P') != 1)
+	if (check_empty_line(map) == 0 ||is_rectangular(map) == 0 || is_wall(map) == 0 || is_valide(map) == 0 || count_element(map, 'E') != 1 || count_element(map, 'P') != 1)
 	{
 		printf("Error\n");
 		exit(-1);
