@@ -6,17 +6,16 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:48:25 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/07 22:24:08 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:22:31 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-
-int is_rectangular(char **map)
+int	is_rectangular(char **map)
 {
-	int i;
-	
+	int	i;
+
 	i = 1;
 	if (!map)
 		return (0);
@@ -28,11 +27,12 @@ int is_rectangular(char **map)
 	}
 	return (1);
 }
-int is_wall(char **map)
+
+int	is_wall(char **map)
 {
-	int i;
-	int j;
-	int l;
+	int	i;
+	int	j;
+	int	l;
 
 	i = 0;
 	j = 0;
@@ -55,10 +55,10 @@ int is_wall(char **map)
 	return (1);
 }
 
-int is_valide(char **map)
+int	is_valide(char **map)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (map[i] != '\0')
@@ -66,7 +66,8 @@ int is_valide(char **map)
 		j = 0;
 		while (map[i][j] != '\0')
 		{
-			if (map[i][j] != 'E' && map[i][j] != 'C' && map[i][j] != 'P' && map[i][j] != '1' && map[i][j] != '0')
+			if (map[i][j] != 'E' && map[i][j] != 'C' && map[i][j] != 'P'
+					&& map[i][j] != '1' && map[i][j] != '0')
 				return (0);
 			j++;
 		}
@@ -75,12 +76,12 @@ int is_valide(char **map)
 	return (1);
 }
 
-int count_element(char **map, char c)
+int	count_element(char **map, char c)
 {
-	int x;
-	int y;
-	int count;
-	
+	int	x;
+	int	y;
+	int	count;
+
 	y = 0;
 	count = 0;
 	while (map[y])
@@ -97,13 +98,16 @@ int count_element(char **map, char c)
 	return (count);
 }
 
-void valide_map(char **map)
+void	valide_map(char **map)
 {
-	if (check_empty_line(map) == 0 ||is_rectangular(map) == 0 || is_wall(map) == 0 || is_valide(map) == 0 || count_element(map, 'E') != 1 || count_element(map, 'P') != 1)
+	if (check_empty_line(map) == 0 || is_rectangular(map) == 0
+		|| is_wall(map) == 0 || is_valide(map) == 0
+		|| count_element(map, 'E') != 1 || count_element(map, 'P') != 1)
 	{
-		printf("Error\n");
+		ft_printf("Error, Invalide map\n");
+		free_map(map);
 		exit(-1);
-	}else 
+	}
+	else
 		printf("valide map\n");
-		
 }

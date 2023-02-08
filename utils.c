@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:02:56 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/05 18:21:22 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:36:57 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ char	*ft_strjoin_so_long(char const *s1, char const *s2)
 	return (str);
 }
 
-void path_position(t_path *path)
+void	path_position(t_path *path)
 {
-	int x;
-	int y;
-	
+	int	x;
+	int	y;
+
 	y = 0;
 	while (path->map[y] != '\0')
 	{

@@ -6,13 +6,13 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:57:36 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/07 20:44:42 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:05:40 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void player_events(int keycode, t_game *game)
+void	player_events(int keycode, t_game *game)
 {
 	if (keycode == KEY_W || keycode == KEY_UP)
 	{
@@ -37,7 +37,7 @@ static void player_events(int keycode, t_game *game)
 	ft_printf("Moves: %d\n", game->moves);
 }
 
-int press_button(int keycode, t_game *game)
+int	press_button(int keycode, t_game *game)
 {
 	if (!game->end)
 		player_events(keycode, game);

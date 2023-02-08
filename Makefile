@@ -2,7 +2,7 @@ NAME = so_long
 
 CC = @CC
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror
 
 MINILIBX = -lmlx -framework OpenGL -framework AppKit -lz
 

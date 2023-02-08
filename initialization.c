@@ -6,18 +6,17 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:24:37 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/04 16:40:36 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:12:16 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-
-void count_coin(t_game *game)
+void	count_coin(t_game *game)
 {
-	int x;
-	int y;
-	
+	int	x;
+	int	y;
+
 	y = 0;
 	while (game->map[y] != '\0')
 	{
@@ -32,13 +31,18 @@ void count_coin(t_game *game)
 	}
 }
 
-void initial_image(t_game *gimg)
+void	initial_image(t_game *gimg)
 {
-	gimg->img_c = mlx_xpm_file_to_image(gimg->mlx, "./imgs/coine.xpm", &gimg->img_width, &gimg->img_hight);
-	gimg->img_p =  mlx_xpm_file_to_image(gimg->mlx, "./imgs/player.xpm", &gimg->img_width, &gimg->img_hight);
-	gimg->img_e =  mlx_xpm_file_to_image(gimg->mlx, "./imgs/door.xpm", &gimg->img_width, &gimg->img_hight);
-	gimg->img_w =  mlx_xpm_file_to_image(gimg->mlx, "./imgs/wall.xpm", &gimg->img_width, &gimg->img_hight);
-	gimg->img_field =  mlx_xpm_file_to_image(gimg->mlx, "./imgs/field.xpm", &gimg->img_width, &gimg->img_hight);
+	gimg->img_c = mlx_xpm_file_to_image(gimg->mlx,
+			"./imgs/coine.xpm", &gimg->img_width, &gimg->img_hight);
+	gimg->img_p = mlx_xpm_file_to_image(gimg->mlx,
+			"./imgs/player.xpm", &gimg->img_width, &gimg->img_hight);
+	gimg->img_e = mlx_xpm_file_to_image(gimg->mlx,
+			"./imgs/door.xpm", &gimg->img_width, &gimg->img_hight);
+	gimg->img_w = mlx_xpm_file_to_image(gimg->mlx,
+			"./imgs/wall.xpm", &gimg->img_width, &gimg->img_hight);
+	gimg->img_field = mlx_xpm_file_to_image(gimg->mlx,
+			"./imgs/field.xpm", &gimg->img_width, &gimg->img_hight);
 	gimg->moves = 0;
 	gimg->nc = 0;
 	gimg->player_x = 0;
@@ -47,9 +51,10 @@ void initial_image(t_game *gimg)
 }
 
 /*the hight and width of window*/
-void initial_win_szie(t_game *gsize)
+void	initial_win_szie(t_game *gsize)
 {
-	int i;
+	int	i;
+
 	gsize->map_w = ft_strlen(gsize->map[0]) * 65;
 	i = 0;
 	while (gsize->map[i] != '\0')
@@ -57,7 +62,7 @@ void initial_win_szie(t_game *gsize)
 	gsize->map_h = i * 65;
 }
 
-void initial_game(t_game *game)
+void	initial_game(t_game *game)
 {
 	game->mlx = mlx_init();
 	initial_win_szie(game);
