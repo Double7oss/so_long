@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 18:00:51 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/08 16:39:07 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 19:12:31 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,5 @@ void	valid_path(t_path *path)
 	{
 		ft_printf("invalide path\n");
 		exit(0);
-	}
-	else
-	{
-		ft_printf("valide Path\n");
 	}
 }

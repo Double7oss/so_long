@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:48:25 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/08 16:22:31 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 19:12:45 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,4 @@ void	valide_map(char **map)
 		free_map(map);
 		exit(-1);
 	}
-	else
-		printf("valide map\n");
 }

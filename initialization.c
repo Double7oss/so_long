@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:24:37 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/08 16:12:16 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:56:28 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ void	initial_image(t_game *gimg)
 	gimg->end = 0;
 }
 
+int	ft_exit(void)
+{
+	exit(0);
+	return (0);
+}
+
 /*the hight and width of window*/
 void	initial_win_szie(t_game *gsize)
 {
@@ -71,5 +77,6 @@ void	initial_game(t_game *game)
 	count_coin(game);
 	dr_map(game);
 	mlx_key_hook(game->win, press_button, game);
+	mlx_hook(game->win, 17, (1L << 2), ft_exit, game);
 	mlx_loop(game->mlx);
 }

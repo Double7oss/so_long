@@ -6,7 +6,7 @@
 /*   By: hel-kadd <hel-kadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:57:33 by hel-kadd          #+#    #+#             */
-/*   Updated: 2023/02/08 16:26:13 by hel-kadd         ###   ########.fr       */
+/*   Updated: 2023/02/08 19:10:18 by hel-kadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ char	**read_map(char *path)
 		line = get_next_line(fd);
 		if (!line)
 			break ;
-		holder = h_map;
 		empty(line);
+		holder = h_map;
 		h_map = ft_strjoin_so_long(holder, line);
 		free(holder);
 		free(line);
